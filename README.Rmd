@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# AMKAT
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+AMKAT (short for Adaptive Multivariate Kernel-based Association Test) is a flexible,  nonparametric test for joint association between a multivariate quantitative response and a high-dimensional set of features. It includes the following notable features:
+
+* A feature selection method for filtering noise variables out of the feature set 
+* A kernel-based test statistic that uses a different kernel function for each response variable, with a method for selecting each kernel function individually
+* A method of adjusting for covariate effects on the response variables
+* All significant computations performed using compiled C++ routines
+
+## Installation
+
+You can install the development version of AMKAT using the following commands in `R`:
+
+```
+install.packages("devtools")
+devtools::install_github("brianpatrickneal/AMKAT")
+```
+
+## Example
+
+Testing is straightforward using the `amkat` function. Below, we generate toy data for a set of feature variables (`x`) and for a set of response variables (`y`), as well as for a set of covariates (`w`), and test for joint association between the features and response: 
+
+```{r example}
+library(AMKAT)
+set.seed(42)
+n <- 20 # sample size
+y <- matrix(rnorm(3 * n), nrow = n, ncol = 3) # 3 response variables
+x <- matrix(rnorm(50 * n), nrow = n, ncol = 50) # 50 feature variables
+w <- matrix(rnorm(2 * n), nrow = n, ncol = 2) # 2 covariates
+test_results <- amkat(y, x, covariates = w)
+str(test_results)
+```
+
+## Other Information
+
+More details on the main function `amkat` can be found in its help file. Type `?AMKATpackage` for an index of the other contents in the package's namespace.

@@ -1,0 +1,8 @@
+export(amkat)
+export(listAmkatKernelFunctions)
+export(applyAmkatFilter)
+export(generateKernelMatrix)
+
+useDynLib(AMKAT, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+exportPattern("^[[:alpha:]]+")

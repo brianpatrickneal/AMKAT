@@ -1,0 +1,19 @@
+Package: AMKAT
+Type: Package
+Title: AMKAT: An Adaptive Multivariate Kernel-based Association Test
+Version: 0.0.0.9000
+Date: 2021-10-31
+Authors@R: c(
+    person("Brian", "Neal", email = "bneal@mail.sfsu.edu", 
+        role = c("aut", "cre")),
+    person("R Core Team", role = "cph", 
+        comment = "AMKAT/src/computeTailAreaSpearmanRho.c"))
+Description: A high-dimensional, nonparametric, multivariate test of association
+    for quantitative data, with methods for kernel selection, feature selection 
+    and covariate adjustment.
+License: GPL-3
+Imports: Rcpp (>= 1.0.6), KRLS
+LinkingTo: Rcpp, RcppArmadillo, BH
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
