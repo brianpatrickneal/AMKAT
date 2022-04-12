@@ -1,6 +1,6 @@
 export(amkat)
 export(listAmkatKernelFunctions)
-export(applyAmkatFilter)
+export(phimr)
 export(generateKernelMatrix)
 
 useDynLib(AMKAT, .registration=TRUE)
