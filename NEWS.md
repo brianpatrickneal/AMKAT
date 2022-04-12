@@ -1,4 +1,9 @@
 
+# AMKAT 0.0.0.9002
+
+* `applyAmkatFilter()` renamed to `phimr()`
+* `phimr()` and `generateKernelMatrix()` placed in their own respective files; `supplemental.R` now contains only internal functions and has been renamed to `internal.R`
+
 
 # AMKAT 0.0.0.9001
 

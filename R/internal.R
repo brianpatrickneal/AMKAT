@@ -1,8 +1,9 @@
 # Supplemental functions for AMKAT
 
 
-# Apply AMKAT's filter method; return list of selected column indices for x
-applyAmkatFilter <- function(y, x) {
+# Apply phimr filter (permutation-based high-dimensional multiple response);
+# return list of selected column indices for x
+phimr <- function(y, x) {
   .checkNonEmpty("y", y)
   .checkNonEmpty("x", x)
   if (!is.matrix(y) | !is.numeric(y)) y <- .convertToNumericMatrix(y)
