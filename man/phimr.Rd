@@ -1,11 +1,11 @@
-\name{applyAmkatFilter}
-\alias{applyAmkatFilter}
-\title{Permutation-Based Filter Method For Feature Selection}
+\name{phimr}
+\alias{phimr}
+\title{Permutation-Based High-Dimensional Multiple Response Filter}
 \description{
 Selects columns of \code{x} related to one or more columns of \code{y} using a filter method in which permuted data is compared to original data using nonparametric tests of association between columns from \code{x} and columns from \code{y}.
 }
 \usage{
-applyAmkatFilter(y, x)
+phimr(y, x)
 }
 \arguments{
   \item{y}{a numeric matrix containing data on the dependent variables, with at least two observations indexed by row.}
@@ -29,7 +29,7 @@ An integer vector of variable length, containing the indices of the columns of \
 \examples{
 y <- matrix(rnorm(4 * 25), nrow = 25, ncol = 4)
 x <- matrix(rnorm(50 * 25), nrow = 25, ncol = 50)
-selected_x_columns <- applyAmkatFilter(y, x)
+selected_x_columns <- phimr(y, x)
 }
 
 \author{Brian Neal}
