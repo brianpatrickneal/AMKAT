@@ -7,7 +7,7 @@ Authors@R: c(
     person("Brian", "Neal", email = "bneal@mail.sfsu.edu", 
         role = c("aut", "cre")),
     person("Tao", "He", email = "hetao@sfsu.edu",
-        role = c("ths")),
+        role = c("aut", "ths")),
     person("R Core Team", role = "cph", 
         comment = "computeTailAreaSpearmanRho.c"))
 Description: A high-dimensional, nonparametric, multivariate test of association
