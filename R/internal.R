@@ -32,6 +32,9 @@ generateKernelMatrix <- function(x, kernel_function = "gau") {
 .generateKernelMatrix <- function(x, kernel_function) {
   .Call(`_AMKAT_generateKernelMatrix`, x, kernel_function)
 }
+.estimateSignalToNoise <- function(y, yvar, kermat) {
+  .Call(`_AMKAT_estimateSignalToNoise`, y, yvar, kermat)
+}
 .generatePermStats <- function(y, y_variances, x, candidate_kernels,
                                num_permutations) {
   .Call(`_AMKAT_generatePermStats`, y, y_variances, x,
